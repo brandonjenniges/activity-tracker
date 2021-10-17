@@ -18,6 +18,8 @@
 		FB14ECB9271CC48700F6A334 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECB8271CC48700F6A334 /* HomeViewModel.swift */; };
 		FB14ECBB271CC49000F6A334 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECBA271CC49000F6A334 /* HomeView.swift */; };
 		FB14ECBE271CC5A100F6A334 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */; };
+		FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC0271CC6EE00F6A334 /* ActivitySession.swift */; };
+		FB14ECC3271CC75200F6A334 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC2271CC75200F6A334 /* ActivityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		FB14ECBA271CC49000F6A334 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB14ECBC271CC56900F6A334 /* Activity-Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Activity-Tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FB14ECC0271CC6EE00F6A334 /* ActivitySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySession.swift; sourceTree = "<group>"; };
+		FB14ECC2271CC75200F6A334 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +111,10 @@
 				FB14EC8F271CC39B00F6A334 /* ActivityTracker.xcdatamodeld */,
 				FB14EC84271CC39900F6A334 /* AppDelegate.swift */,
 				FB14EC88271CC39B00F6A334 /* Assets.xcassets */,
+				FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */,
+				FB14ECBF271CC6D400F6A334 /* Model */,
 				FB14EC8A271CC39B00F6A334 /* Preview Content */,
 				FB14ECB3271CC47200F6A334 /* UI */,
-				FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */,
 			);
 			path = "Activity Tracker";
 			sourceTree = "<group>";
@@ -163,6 +168,15 @@
 				FB14ECBA271CC49000F6A334 /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FB14ECBF271CC6D400F6A334 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB14ECC0271CC6EE00F6A334 /* ActivitySession.swift */,
+				FB14ECC2271CC75200F6A334 /* ActivityType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB14ECC3271CC75200F6A334 /* ActivityType.swift in Sources */,
 				FB14EC91271CC39B00F6A334 /* ActivityTracker.xcdatamodeld in Sources */,
 				FB14EC85271CC39900F6A334 /* AppDelegate.swift in Sources */,
 				FB14ECB7271CC47E00F6A334 /* HomeViewController.swift in Sources */,
 				FB14ECBB271CC49000F6A334 /* HomeView.swift in Sources */,
 				FB14ECB9271CC48700F6A334 /* HomeViewModel.swift in Sources */,
+				FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
