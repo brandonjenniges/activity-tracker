@@ -9,7 +9,15 @@ import CoreData
 import SwiftUI
 
 @objc(ActivitySession)
-public class ActivitySession: NSManagedObject {}
+public class ActivitySession: NSManagedObject {
+    lazy var dayString: String = {
+        DateUtils.displayRowDate(date: self.date)
+    }()
+    
+    lazy var timeString: String = {
+        DateUtils.displaySessionDate(date: self.date)
+    }()
+}
 
 extension ActivitySession {
     @NSManaged var type: Int
@@ -37,4 +45,10 @@ extension ActivitySession {
         FetchRequest(entity: ActivitySession.entity(), sortDescriptors: [])
     }
     
+}
+
+extension ActivitySession {
+    var sessionType: String {
+        (ActivityType(rawValue: self.type) ?? .pushup).displayString()
+    }
 }

@@ -20,6 +20,13 @@
 		FB14ECBE271CC5A100F6A334 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */; };
 		FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC0271CC6EE00F6A334 /* ActivitySession.swift */; };
 		FB14ECC3271CC75200F6A334 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC2271CC75200F6A334 /* ActivityType.swift */; };
+		FB14ECC7271CCD4B00F6A334 /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC6271CCD4B00F6A334 /* CreateActivityViewController.swift */; };
+		FB14ECC9271CCD5400F6A334 /* CreateActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECC8271CCD5400F6A334 /* CreateActivityViewModel.swift */; };
+		FB14ECCE271CCDAB00F6A334 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECCD271CCDAB00F6A334 /* NavigationView.swift */; };
+		FB14ECD0271CCDBD00F6A334 /* NavigationViewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECCF271CCDBD00F6A334 /* NavigationViewItemView.swift */; };
+		FB14ECD2271CD00600F6A334 /* CreateActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECD1271CD00600F6A334 /* CreateActivityView.swift */; };
+		FB14ECD4271CF41700F6A334 /* HomeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECD3271CF41700F6A334 /* HomeRowView.swift */; };
+		FB14ECD9271CF55000F6A334 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECD8271CF55000F6A334 /* DateUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FB14ECC0271CC6EE00F6A334 /* ActivitySession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySession.swift; sourceTree = "<group>"; };
 		FB14ECC2271CC75200F6A334 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
+		FB14ECC6271CCD4B00F6A334 /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
+		FB14ECC8271CCD5400F6A334 /* CreateActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewModel.swift; sourceTree = "<group>"; };
+		FB14ECCD271CCDAB00F6A334 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		FB14ECCF271CCDBD00F6A334 /* NavigationViewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewItemView.swift; sourceTree = "<group>"; };
+		FB14ECD1271CD00600F6A334 /* CreateActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityView.swift; sourceTree = "<group>"; };
+		FB14ECD3271CF41700F6A334 /* HomeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRowView.swift; sourceTree = "<group>"; };
+		FB14ECD8271CF55000F6A334 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 				FB14ECBF271CC6D400F6A334 /* Model */,
 				FB14EC8A271CC39B00F6A334 /* Preview Content */,
 				FB14ECB3271CC47200F6A334 /* UI */,
+				FB14ECD5271CF4E900F6A334 /* Util */,
 			);
 			path = "Activity Tracker";
 			sourceTree = "<group>";
@@ -147,6 +162,8 @@
 		FB14ECB3271CC47200F6A334 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB14ECCC271CCDA200F6A334 /* Common */,
+				FB14ECC4271CCD3C00F6A334 /* Create */,
 				FB14ECB4271CC47200F6A334 /* Home */,
 			);
 			path = UI;
@@ -166,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				FB14ECBA271CC49000F6A334 /* HomeView.swift */,
+				FB14ECD3271CF41700F6A334 /* HomeRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +195,41 @@
 				FB14ECC2271CC75200F6A334 /* ActivityType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FB14ECC4271CCD3C00F6A334 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				FB14ECC5271CCD3C00F6A334 /* View */,
+				FB14ECC6271CCD4B00F6A334 /* CreateActivityViewController.swift */,
+				FB14ECC8271CCD5400F6A334 /* CreateActivityViewModel.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		FB14ECC5271CCD3C00F6A334 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB14ECD1271CD00600F6A334 /* CreateActivityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB14ECCC271CCDA200F6A334 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB14ECCD271CCDAB00F6A334 /* NavigationView.swift */,
+				FB14ECCF271CCDBD00F6A334 /* NavigationViewItemView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB14ECD5271CF4E900F6A334 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FB14ECD8271CF55000F6A334 /* DateUtils.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,12 +364,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB14ECC3271CC75200F6A334 /* ActivityType.swift in Sources */,
+				FB14ECD0271CCDBD00F6A334 /* NavigationViewItemView.swift in Sources */,
+				FB14ECCE271CCDAB00F6A334 /* NavigationView.swift in Sources */,
+				FB14ECD2271CD00600F6A334 /* CreateActivityView.swift in Sources */,
+				FB14ECC7271CCD4B00F6A334 /* CreateActivityViewController.swift in Sources */,
 				FB14EC91271CC39B00F6A334 /* ActivityTracker.xcdatamodeld in Sources */,
 				FB14EC85271CC39900F6A334 /* AppDelegate.swift in Sources */,
 				FB14ECB7271CC47E00F6A334 /* HomeViewController.swift in Sources */,
 				FB14ECBB271CC49000F6A334 /* HomeView.swift in Sources */,
+				FB14ECC9271CCD5400F6A334 /* CreateActivityViewModel.swift in Sources */,
 				FB14ECB9271CC48700F6A334 /* HomeViewModel.swift in Sources */,
+				FB14ECD9271CF55000F6A334 /* DateUtils.swift in Sources */,
 				FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */,
+				FB14ECD4271CF41700F6A334 /* HomeRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
