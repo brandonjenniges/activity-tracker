@@ -25,6 +25,10 @@ class HomeViewController: UIHostingController<HomeView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.createNewActivity.sink {
+            let context = PersistenceContainer.shared.container.viewContext
+            ActivitySession.createWith(type: .pushup, reps: 10, date: Date(), using: context)
+        }.store(in: &self.disposeBag)
     }
 }
 

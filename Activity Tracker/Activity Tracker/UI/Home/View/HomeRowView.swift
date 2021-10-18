@@ -24,7 +24,7 @@ struct HomeRowView: View {
 
 struct HomeRowView_Previews: PreviewProvider {
     static var previews: some View {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let context = PersistenceContainer.shared.container.viewContext
         let session = ActivitySession(context: context)
         session.type = ActivityType.pushup.rawValue
         session.date = Date()
