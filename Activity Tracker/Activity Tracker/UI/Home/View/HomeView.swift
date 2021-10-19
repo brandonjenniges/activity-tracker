@@ -20,7 +20,7 @@ struct HomeView: View {
                 VStack {
                     ForEach(viewModel.activityGroups) { group in
                         VStack {
-                            Text(group.date)
+                            Text(group.displayDate)
                             ForEach(group.sessions, id: \.self) { session in
                                 HomeRowView(activitySession: session)
                         }

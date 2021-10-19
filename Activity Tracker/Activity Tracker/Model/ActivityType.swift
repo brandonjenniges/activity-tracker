@@ -10,6 +10,7 @@ import Foundation
 enum ActivityType: Int {
     case pushup = 0
     case situp  = 1
+    case squat  = 2
     
     func displayString() -> String {
         switch self {
@@ -17,6 +18,8 @@ enum ActivityType: Int {
             return "Push-up"
         case .situp:
             return "Sit-up"
+        case .squat:
+            return "Squat"
         }
     }
 }

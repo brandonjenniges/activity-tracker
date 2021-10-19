@@ -36,18 +36,26 @@ class HomeViewModel: ObservableObject {
         
         var returnGroup = [ActivitySessionGroup]()
         for group in groups {
-            returnGroup.append(ActivitySessionGroup(date: group.key, sessions: group.value))
+            returnGroup.append(ActivitySessionGroup(displayDate: group.key, sessions: group.value.sorted { $0.date > $1.date }))
         }
-        self.activityGroups = returnGroup
+        self.activityGroups = returnGroup.sorted {
+            $0.date > $1.date
+        }
     }
     
 }
 
 struct ActivitySessionGroup: Identifiable {
-    let date: String
+    let displayDate: String
+    let date: Date
     let sessions: [ActivitySession]
     
+    init(displayDate: String, sessions: [ActivitySession]) {
+        self.displayDate = displayDate
+        self.date = DateUtils.dateFormatter.date(from: displayDate) ?? Date()
+        self.sessions = sessions
+    }
     var id: String {
-        date
+        displayDate
     }
 }

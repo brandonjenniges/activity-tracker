@@ -25,10 +25,17 @@ class HomeViewController: UIHostingController<HomeView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.createNewActivity.sink {
-            let context = PersistenceContainer.shared.container.viewContext
-            ActivitySession.createWith(type: .pushup, reps: 10, date: Date(), using: context)
-        }.store(in: &self.disposeBag)
+        self.setupObservables()
+    }
+    
+    // MARK: - Combine
+    
+    private func setupObservables() {
+        self.viewModel.createNewActivity.sink { [weak self] in
+            guard let self = self else { return }
+            self.present(CreateActivityViewController(), animated: true, completion: nil)
+        }
+        .store(in: &self.disposeBag)
     }
 }
 

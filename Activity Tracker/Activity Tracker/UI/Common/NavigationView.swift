@@ -40,6 +40,8 @@ struct NavigationView: View {
     private var leftItemView: some View {
         if let leftItem = leftItem {
             leftItem
+        } else if let rightItem = rightItem {
+            rightItem.hidden()
         } else {
             Spacer()
         }
@@ -49,6 +51,8 @@ struct NavigationView: View {
     private var rightItemView: some View {
         if let rightItem = rightItem {
             rightItem
+        } else if let leftItem = leftItem {
+            leftItem.hidden()
         } else {
             Spacer()
         }

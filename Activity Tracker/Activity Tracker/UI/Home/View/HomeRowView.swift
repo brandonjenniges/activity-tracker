@@ -16,6 +16,8 @@ struct HomeRowView: View {
             Text(activitySession.sessionType)
                 .fontWeight(.bold)
             Text(" - ")
+            Text("\(activitySession.reps)")
+            Text(" - ")
             Text(activitySession.timeString)
             Spacer()
         }

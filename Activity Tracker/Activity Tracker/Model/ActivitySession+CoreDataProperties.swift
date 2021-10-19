@@ -32,7 +32,7 @@ extension ActivitySession {
     
     @nonobjc public class func basicFetchRequest() -> NSFetchRequest<ActivitySession> {
         let request = NSFetchRequest<ActivitySession>(entityName: "ActivitySession")
-        let sort = NSSortDescriptor(key: "date", ascending: false)
+        let sort = NSSortDescriptor(key: "date", ascending: true)
         request.sortDescriptors = [sort]
         return request
     }
