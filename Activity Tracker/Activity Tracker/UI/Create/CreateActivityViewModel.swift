@@ -11,7 +11,7 @@ import Combine
 class CreateActivityViewModel: ObservableObject {
 
     @Published var canCreate: Bool = false
-    @Published var selectedType: ActivityType = .pushup
+    @Published var selectedType: ActivityType = .squat
     @Published var repTextField: String = ""
     @Published var date: Date = Date()
     

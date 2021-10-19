@@ -15,10 +15,22 @@ struct HomeRowView: View {
         HStack(spacing: 0) {
             Text(activitySession.sessionType)
                 .fontWeight(.bold)
-            Text(" - ")
-            Text("\(activitySession.reps)")
-            Text(" - ")
-            Text(activitySession.timeString)
+                .foregroundColor(.white)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 6)
+                .shadow(radius: 2)
+                .background(ContainerRelativeShape()
+                                .fill(activitySession.typeColor))
+                .clipShape(Capsule())
+            VStack(alignment: .leading, spacing: 0) {
+                Text("\(activitySession.reps)")
+                    .font(.caption)
+                    .fontWeight(.bold)
+                Text(activitySession.timeString)
+                    .foregroundColor(Color(uiColor: UIColor.secondaryLabel))
+                    .font(.caption2)
+            }
+            .padding(8)
             Spacer()
         }
     }

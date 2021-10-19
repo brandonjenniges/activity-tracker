@@ -43,4 +43,8 @@ extension ActivitySession {
     var sessionType: String {
         (ActivityType(rawValue: self.type) ?? .pushup).displayString()
     }
+    
+    var typeColor: Color {
+        (ActivityType(rawValue: self.type) ?? .pushup).color()
+    }
 }

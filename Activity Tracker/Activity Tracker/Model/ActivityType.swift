@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum ActivityType: Int {
     case pushup = 0
@@ -20,6 +21,17 @@ enum ActivityType: Int {
             return "Sit-up"
         case .squat:
             return "Squat"
+        }
+    }
+    
+    func color() -> Color {
+        switch self {
+        case .pushup:
+            return .purple
+        case .situp:
+            return .mint
+        case .squat:
+            return .pink
         }
     }
 }

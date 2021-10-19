@@ -12,6 +12,8 @@ struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
     
+    private let gridItemLayout: [GridItem] = Array(repeating: .init(.flexible(minimum: 40)), count: 2) // 3 wide grid
+    
     var body: some View {
         VStack {
             navigationView
@@ -19,17 +21,30 @@ struct HomeView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.activityGroups) { group in
-                        VStack {
+                        VStack(alignment: .leading, spacing: 8) {
                             Text(group.displayDate)
-                            ForEach(group.sessions, id: \.self) { session in
-                                HomeRowView(activitySession: session)
+                                .font(.title2)
+                                .fontWeight(.bold)
+                            Divider()
+                                .padding(.bottom, 4)
+                            
+                                LazyVGrid(columns: gridItemLayout, spacing: 0) {
+                                    ForEach(group.sessions, id: \.self) { session in
+                                        HomeRowView(activitySession: session)
+                                            .padding(.leading, 8)
+                                    }
+                                }
+                            
+                            Spacer(minLength: 8)
                         }
                     }
-                  }
                 }
+                .padding(.horizontal, 8)
             }
+            .padding(.bottom, 16)
             Spacer()
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
     
     @ViewBuilder
