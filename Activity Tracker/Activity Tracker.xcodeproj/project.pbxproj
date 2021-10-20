@@ -31,6 +31,7 @@
 		FB14ECE0271E2AF400F6A334 /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECDF271E2AF400F6A334 /* PersistenceContainer.swift */; };
 		FB14ECE2271E2B1400F6A334 /* ActivityStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECE1271E2B1400F6A334 /* ActivityStorage.swift */; };
 		FB14ECE4271E72FB00F6A334 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECE3271E72FB00F6A334 /* PrimaryButton.swift */; };
+		FB60961E271F520B00EB20D8 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FB60961D271F520B00EB20D8 /* Charts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB60961E271F520B00EB20D8 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +270,9 @@
 			dependencies = (
 			);
 			name = "Activity Tracker";
+			packageProductDependencies = (
+				FB60961D271F520B00EB20D8 /* Charts */,
+			);
 			productName = "Activity Tracker";
 			productReference = FB14EC81271CC39900F6A334 /* Activity Tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -340,6 +345,9 @@
 				Base,
 			);
 			mainGroup = FB14EC78271CC39900F6A334;
+			packageReferences = (
+				FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = FB14EC82271CC39900F6A334 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -561,7 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Activity Tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = C4RFALAB5D;
+				DEVELOPMENT_TEAM = 9MN6X9B3NV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Activity-Tracker-Info.plist";
@@ -577,7 +585,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "brandonjenniges.Activity-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = brandonjenniges.ActivityTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -593,7 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Activity Tracker/Preview Content\"";
-				DEVELOPMENT_TEAM = C4RFALAB5D;
+				DEVELOPMENT_TEAM = QW26LMGALU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Activity-Tracker-Info.plist";
@@ -753,6 +761,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB60961D271F520B00EB20D8 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FB14EC8F271CC39B00F6A334 /* ActivityTracker.xcdatamodeld */ = {
