@@ -40,14 +40,14 @@ struct CreateActivityView: View {
             Text("Type:")
                 .font(.title2)
                 .fontWeight(.bold)
-            Text(self.viewModel.selectedType.displayString())
-                .font(.title3)
-                .fontWeight(.bold)
-                .foregroundColor(.blue)
-                .padding(.leading, 16)
-                .onTapGesture {
-                    self.viewModel.selectTypeSubject.send()
-                }
+            
+            Picker("Select Type", selection: $viewModel.selectedType, content: {
+                Text(ActivityType.pushup.displayString()).tag(ActivityType.pushup)
+                Text(ActivityType.situp.displayString()).tag(ActivityType.situp)
+                Text(ActivityType.squat.displayString()).tag(ActivityType.squat)
+            })
+            .pickerStyle(SegmentedPickerStyle())
+            
             Divider()
         }
     }
