@@ -18,30 +18,11 @@ struct HomeView: View {
         VStack {
             navigationView
             Spacer()
-            ScrollView {
-                VStack {
-                    ForEach(viewModel.activityGroups) { group in
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(group.displayDate)
-                                .font(.title2)
-                                .fontWeight(.bold)
-                            Divider()
-                                .padding(.bottom, 4)
-                            
-                                LazyVGrid(columns: gridItemLayout, spacing: 0) {
-                                    ForEach(group.sessions, id: \.self) { session in
-                                        HomeRowView(activitySession: session)
-                                            .padding(.leading, 8)
-                                    }
-                                }
-                            
-                            Spacer(minLength: 8)
-                        }
-                    }
-                }
-                .padding(.horizontal, 8)
+            if self.viewModel.activityGroups.count > 0 {
+                dataView
+            } else {
+                Text("NO Data")
             }
-            .padding(.bottom, 16)
             Spacer()
         }
         .edgesIgnoringSafeArea(.bottom)
@@ -49,7 +30,45 @@ struct HomeView: View {
     
     @ViewBuilder
     private var navigationView: some View {
-        NavigationView(title: "Create", rightItem: NavigationViewItemView(text: "Create", action: { self.viewModel.createNewActivity.send() }))
+        NavigationView(title: "Activity Tracker", rightItem: NavigationViewItemView(text: "Create", action: { self.viewModel.createNewActivity.send() }))
+    }
+    
+    @ViewBuilder
+    private var dataView: some View {
+        ScrollView {
+            ActivityChartFullView(data: self.viewModel.chartEntries, max: self.viewModel.chartMax, min: self.viewModel.chartMin)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.white)
+                        .shadow(radius: 2)
+                    
+                )
+                .padding(8)
+            
+            
+            VStack {
+                ForEach(viewModel.activityGroups) { group in
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(group.displayDate)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        Divider()
+                            .padding(.bottom, 4)
+                        
+                        LazyVGrid(columns: gridItemLayout, spacing: 0) {
+                            ForEach(group.sessions, id: \.self) { session in
+                                HomeRowView(activitySession: session)
+                                    .padding(.leading, 8)
+                            }
+                        }
+                        
+                        Spacer(minLength: 8)
+                    }
+                }
+            }
+            .padding(.horizontal, 8)
+        }
+        .padding(.bottom, 16)
     }
 }
 

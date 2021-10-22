@@ -31,7 +31,13 @@
 		FB14ECE0271E2AF400F6A334 /* PersistenceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECDF271E2AF400F6A334 /* PersistenceContainer.swift */; };
 		FB14ECE2271E2B1400F6A334 /* ActivityStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECE1271E2B1400F6A334 /* ActivityStorage.swift */; };
 		FB14ECE4271E72FB00F6A334 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB14ECE3271E72FB00F6A334 /* PrimaryButton.swift */; };
-		FB60961E271F520B00EB20D8 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FB60961D271F520B00EB20D8 /* Charts */; };
+		FB3E430527223DB60020048F /* ActivityChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430427223DB60020048F /* ActivityChartView.swift */; };
+		FB3E430727223DEF0020048F /* ActivityChartLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430627223DEF0020048F /* ActivityChartLine.swift */; };
+		FB3E430A27223E2F0020048F /* Path+ChartLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430927223E2F0020048F /* Path+ChartLine.swift */; };
+		FB3E430C27223F6C0020048F /* ActivityChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430B27223F6C0020048F /* ActivityChartItem.swift */; };
+		FB3E430E27225EBA0020048F /* Calendar+DayCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430D27225EBA0020048F /* Calendar+DayCount.swift */; };
+		FB3E4310272265F10020048F /* ActivityChartFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430F272265F10020048F /* ActivityChartFullView.swift */; };
+		FB3E4312272266870020048F /* ActivityChartLegendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +86,13 @@
 		FB14ECDF271E2AF400F6A334 /* PersistenceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceContainer.swift; sourceTree = "<group>"; };
 		FB14ECE1271E2B1400F6A334 /* ActivityStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStorage.swift; sourceTree = "<group>"; };
 		FB14ECE3271E72FB00F6A334 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		FB3E430427223DB60020048F /* ActivityChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartView.swift; sourceTree = "<group>"; };
+		FB3E430627223DEF0020048F /* ActivityChartLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartLine.swift; sourceTree = "<group>"; };
+		FB3E430927223E2F0020048F /* Path+ChartLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Path+ChartLine.swift"; sourceTree = "<group>"; };
+		FB3E430B27223F6C0020048F /* ActivityChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartItem.swift; sourceTree = "<group>"; };
+		FB3E430D27225EBA0020048F /* Calendar+DayCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+DayCount.swift"; sourceTree = "<group>"; };
+		FB3E430F272265F10020048F /* ActivityChartFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartFullView.swift; sourceTree = "<group>"; };
+		FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartLegendItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB60961E271F520B00EB20D8 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +148,7 @@
 				FB14EC84271CC39900F6A334 /* AppDelegate.swift */,
 				FB14EC88271CC39B00F6A334 /* Assets.xcassets */,
 				FB14ECDE271E2AF400F6A334 /* CoreData */,
+				FB3E430827223E1D0020048F /* Extension */,
 				FB14ECBD271CC5A100F6A334 /* Launch Screen.storyboard */,
 				FB14ECBF271CC6D400F6A334 /* Model */,
 				FB14EC8A271CC39B00F6A334 /* Preview Content */,
@@ -173,6 +186,7 @@
 		FB14ECB3271CC47200F6A334 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB3E430327223DAD0020048F /* ChartView */,
 				FB14ECCC271CCDA200F6A334 /* Common */,
 				FB14ECC4271CCD3C00F6A334 /* Create */,
 				FB14ECB4271CC47200F6A334 /* Home */,
@@ -254,6 +268,27 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		FB3E430327223DAD0020048F /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				FB3E430427223DB60020048F /* ActivityChartView.swift */,
+				FB3E430627223DEF0020048F /* ActivityChartLine.swift */,
+				FB3E430B27223F6C0020048F /* ActivityChartItem.swift */,
+				FB3E430F272265F10020048F /* ActivityChartFullView.swift */,
+				FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		FB3E430827223E1D0020048F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB3E430927223E2F0020048F /* Path+ChartLine.swift */,
+				FB3E430D27225EBA0020048F /* Calendar+DayCount.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,7 +306,6 @@
 			);
 			name = "Activity Tracker";
 			packageProductDependencies = (
-				FB60961D271F520B00EB20D8 /* Charts */,
 			);
 			productName = "Activity Tracker";
 			productReference = FB14EC81271CC39900F6A334 /* Activity Tracker.app */;
@@ -346,7 +380,6 @@
 			);
 			mainGroup = FB14EC78271CC39900F6A334;
 			packageReferences = (
-				FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = FB14EC82271CC39900F6A334 /* Products */;
 			projectDirPath = "";
@@ -394,8 +427,11 @@
 				FB14ECE4271E72FB00F6A334 /* PrimaryButton.swift in Sources */,
 				FB14ECC3271CC75200F6A334 /* ActivityType.swift in Sources */,
 				FB14ECD0271CCDBD00F6A334 /* NavigationViewItemView.swift in Sources */,
+				FB3E4310272265F10020048F /* ActivityChartFullView.swift in Sources */,
 				FB14ECCE271CCDAB00F6A334 /* NavigationView.swift in Sources */,
+				FB3E430727223DEF0020048F /* ActivityChartLine.swift in Sources */,
 				FB14ECD2271CD00600F6A334 /* CreateActivityView.swift in Sources */,
+				FB3E430A27223E2F0020048F /* Path+ChartLine.swift in Sources */,
 				FB14ECC7271CCD4B00F6A334 /* CreateActivityViewController.swift in Sources */,
 				FB14EC91271CC39B00F6A334 /* ActivityTracker.xcdatamodeld in Sources */,
 				FB14EC85271CC39900F6A334 /* AppDelegate.swift in Sources */,
@@ -403,12 +439,16 @@
 				FB14ECBB271CC49000F6A334 /* HomeView.swift in Sources */,
 				FB14ECDB271CFE4300F6A334 /* ActivitySession+CoreDataProperties.swift in Sources */,
 				FB14ECE2271E2B1400F6A334 /* ActivityStorage.swift in Sources */,
+				FB3E430527223DB60020048F /* ActivityChartView.swift in Sources */,
 				FB14ECC9271CCD5400F6A334 /* CreateActivityViewModel.swift in Sources */,
 				FB14ECB9271CC48700F6A334 /* HomeViewModel.swift in Sources */,
 				FB14ECD9271CF55000F6A334 /* DateUtils.swift in Sources */,
 				FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */,
+				FB3E4312272266870020048F /* ActivityChartLegendItemView.swift in Sources */,
 				FB14ECD4271CF41700F6A334 /* HomeRowView.swift in Sources */,
 				FB14ECE0271E2AF400F6A334 /* PersistenceContainer.swift in Sources */,
+				FB3E430C27223F6C0020048F /* ActivityChartItem.swift in Sources */,
+				FB3E430E27225EBA0020048F /* Calendar+DayCount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,25 +801,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/danielgindi/Charts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FB60961D271F520B00EB20D8 /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FB60961C271F520B00EB20D8 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FB14EC8F271CC39B00F6A334 /* ActivityTracker.xcdatamodeld */ = {
