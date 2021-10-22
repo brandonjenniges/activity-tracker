@@ -12,7 +12,7 @@ struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
     
-    private let gridItemLayout: [GridItem] = Array(repeating: .init(.flexible(minimum: 40)), count: 2) // 3 wide grid
+    private let gridItemLayout: [GridItem] = Array(repeating: .init(.flexible(minimum: 40)), count: 2)
     
     var body: some View {
         VStack {
@@ -35,10 +35,10 @@ struct HomeView: View {
     
     @ViewBuilder
     private var dataView: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             ActivityChartFullView(data: self.viewModel.chartEntries, max: self.viewModel.chartMax, min: self.viewModel.chartMin)
                 .background(
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: 6)
                         .foregroundColor(.white)
                         .shadow(radius: 2)
                     

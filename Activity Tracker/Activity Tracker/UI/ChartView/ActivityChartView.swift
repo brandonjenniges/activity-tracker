@@ -14,24 +14,26 @@ struct ActivityChartView: View {
     let max: Double
     let min: Double
     
+    private let viewHeight: Double = 200
+    
     public var body: some View {
         GeometryReader{ geometry in
             VStack(alignment: .leading, spacing: 8) {
-                ZStack{
+                ZStack(alignment: .bottom) {
                     ForEach(data) { lineItem in
                         GeometryReader{ reader in
                             ActivityChartLine(data: lineItem.data,
-                                      color: lineItem.color,
-                                      max: self.max, min: self.min,
-                                 frame: .constant(CGRect(x: 0, y: 0, width: reader.frame(in: .local).width , height: reader.frame(in: .local).height))
+                                              color: lineItem.color,
+                                              max: self.max,
+                                              min: self.min,
+                                              frame: .constant(CGRect(x: 0, y: 0, width: reader.frame(in: .local).width, height: reader.frame(in: .local).height))
                             )
-                            .offset(x: 0, y: 0)
                         }
-                        .frame(width: geometry.frame(in: .local).size.width, height: 200)
+                        .frame(width: geometry.frame(in: .local).size.width, height: viewHeight * ((lineItem.data.max() ?? max) / max))
                     }
                 }
             }
         }
-        .frame(height: 200)
+        .frame(height: viewHeight)
     }
 }

@@ -17,7 +17,7 @@ struct ActivityChartFullView: View {
         VStack(spacing: 16) {
             
             ActivityChartView(data: data, max: max, min: min)
-            
+            Divider()
             HStack {
                 Spacer()
                 legendItem(for: .pushup)
@@ -26,7 +26,7 @@ struct ActivityChartFullView: View {
                 ActivityChartLegendItemView(title: "Total", color: .orange)
                 Spacer()
             }
-            .padding()
+            .padding(.bottom, 8)
             
         }
     }
