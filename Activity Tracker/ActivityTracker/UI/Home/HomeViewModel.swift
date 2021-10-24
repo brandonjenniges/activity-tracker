@@ -18,6 +18,8 @@ class HomeViewModel: ObservableObject {
     private var disposeBag: [AnyCancellable] = []
     
     let createNewActivity = PassthroughSubject<Void, Never>()
+    let modifyActivity = PassthroughSubject<ActivitySession, Never>()
+    
     init() {
         ActivityStorage.shared.activites.eraseToAnyPublisher().sink { [weak self] activities in
             guard let self = self else { return }

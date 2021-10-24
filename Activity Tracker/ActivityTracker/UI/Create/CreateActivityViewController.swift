@@ -41,9 +41,13 @@ class CreateActivityViewController: UIHostingController<CreateActivityView> {
         
         self.viewModel.createActivitySubject.sink { [weak self] in
             guard let self = self, self.viewModel.canCreate, let repInt = Int(self.viewModel.repTextField), repInt > 0 else { return }
-            let context = PersistenceContainer.shared.container.viewContext
-            ActivitySession.createWith(type: self.viewModel.selectedType, reps: repInt, date: self.viewModel.date, using: context)
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true) {
+                if let exisitingActivity = self.viewModel.existingActivity {
+                    ActivityStorage.shared.updateActivityWith(session: exisitingActivity, type: self.viewModel.selectedType, reps: repInt, date: self.viewModel.date)
+                } else {
+                    ActivityStorage.shared.createActivityWith(type: self.viewModel.selectedType, reps: repInt, date: self.viewModel.date)
+                }
+            }
         }
         .store(in: &self.disposeBag)
         

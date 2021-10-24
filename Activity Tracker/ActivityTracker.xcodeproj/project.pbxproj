@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				FB14EC83271CC39900F6A334 /* ActivityTracker */,
-				FB14EC99271CC39B00F6A334 /* Activity TrackerTests */,
-				FB14ECA3271CC39B00F6A334 /* Activity TrackerUITests */,
+				FB14EC99271CC39B00F6A334 /* ActivityTrackerTests */,
+				FB14ECA3271CC39B00F6A334 /* ActivityTrackerUITests */,
 				FB14EC82271CC39900F6A334 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,21 +164,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FB14EC99271CC39B00F6A334 /* Activity TrackerTests */ = {
+		FB14EC99271CC39B00F6A334 /* ActivityTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
 				FB14EC9A271CC39B00F6A334 /* Activity_TrackerTests.swift */,
 			);
-			path = "Activity TrackerTests";
+			path = ActivityTrackerTests;
 			sourceTree = "<group>";
 		};
-		FB14ECA3271CC39B00F6A334 /* Activity TrackerUITests */ = {
+		FB14ECA3271CC39B00F6A334 /* ActivityTrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				FB14ECA4271CC39B00F6A334 /* Activity_TrackerUITests.swift */,
 				FB14ECA6271CC39B00F6A334 /* Activity_TrackerUITestsLaunchTests.swift */,
 			);
-			path = "Activity TrackerUITests";
+			path = ActivityTrackerUITests;
 			sourceTree = "<group>";
 		};
 		FB14ECB3271CC47200F6A334 /* UI */ = {

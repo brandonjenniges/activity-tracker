@@ -58,9 +58,12 @@ struct HomeView: View {
                             .padding(.bottom, 4)
                         
                         LazyVGrid(columns: gridItemLayout, spacing: 0) {
-                            ForEach(group.sessions, id: \.self) { session in
+                            ForEach(group.sessions, id: \.objectID) { session in
                                 HomeRowView(activitySession: session)
                                     .padding(.leading, 8)
+                                    .onTapGesture {
+                                        self.viewModel.modifyActivity.send(session)
+                                    }
                             }
                         }
                         

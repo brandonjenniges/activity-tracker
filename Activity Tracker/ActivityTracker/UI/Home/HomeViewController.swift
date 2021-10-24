@@ -36,6 +36,30 @@ class HomeViewController: UIHostingController<HomeView> {
             self.present(CreateActivityViewController(), animated: true, completion: nil)
         }
         .store(in: &self.disposeBag)
+        
+        self.viewModel.modifyActivity.sink { [weak self] activity in
+            guard let self = self else { return }
+            self.showModifyAlert(activity)
+        }
+        .store(in: &self.disposeBag)
+    }
+    
+    // MARK: - Modify Alert
+    
+    private func showModifyAlert(_ activity: ActivitySession) {
+        let controller = UIAlertController(title: "Modify Activity", message: "Would you like to edit or delete this session?", preferredStyle: .alert)
+        let editAction = UIAlertAction(title: "Edit", style: .default) { _ in
+            let editActivityViewModel = CreateActivityViewModel(existingActivity: activity)
+            self.present(CreateActivityViewController(viewModel: editActivityViewModel), animated: true, completion: nil)
+        }
+        let deleteAction  = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            ActivityStorage.shared.deleteActivity(activity)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        controller.addAction(editAction)
+        controller.addAction(deleteAction)
+        controller.addAction(cancelAction)
+        self.present(controller, animated: true, completion: nil)
     }
 }
 
