@@ -10,10 +10,17 @@ import SwiftUI
 struct ActivityChartLine: View {
     let data: [Double]
     let color: Color
-    let max: Double
-    let min: Double
+    let frame: CGRect
+    private let max: Double
+    private let min: Double
     
-    @Binding var frame: CGRect
+    init(data: [Double], color: Color, frame: CGRect) {
+        self.data = data
+        self.color = color
+        self.frame = frame
+        self.max = data.max() ?? 0.0
+        self.min = data.min() ?? 0.0
+    }
     
     var stepWidth: CGFloat {
         if data.count < 2 {

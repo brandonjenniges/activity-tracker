@@ -37,7 +37,6 @@
 		FB3E430C27223F6C0020048F /* ActivityChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430B27223F6C0020048F /* ActivityChartItem.swift */; };
 		FB3E430E27225EBA0020048F /* Calendar+DayCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430D27225EBA0020048F /* Calendar+DayCount.swift */; };
 		FB3E4310272265F10020048F /* ActivityChartFullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E430F272265F10020048F /* ActivityChartFullView.swift */; };
-		FB3E4312272266870020048F /* ActivityChartLegendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +91,6 @@
 		FB3E430B27223F6C0020048F /* ActivityChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartItem.swift; sourceTree = "<group>"; };
 		FB3E430D27225EBA0020048F /* Calendar+DayCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+DayCount.swift"; sourceTree = "<group>"; };
 		FB3E430F272265F10020048F /* ActivityChartFullView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartFullView.swift; sourceTree = "<group>"; };
-		FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChartLegendItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +273,6 @@
 				FB3E430627223DEF0020048F /* ActivityChartLine.swift */,
 				FB3E430B27223F6C0020048F /* ActivityChartItem.swift */,
 				FB3E430F272265F10020048F /* ActivityChartFullView.swift */,
-				FB3E4311272266870020048F /* ActivityChartLegendItemView.swift */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -444,7 +441,6 @@
 				FB14ECB9271CC48700F6A334 /* HomeViewModel.swift in Sources */,
 				FB14ECD9271CF55000F6A334 /* DateUtils.swift in Sources */,
 				FB14ECC1271CC6EE00F6A334 /* ActivitySession.swift in Sources */,
-				FB3E4312272266870020048F /* ActivityChartLegendItemView.swift in Sources */,
 				FB14ECD4271CF41700F6A334 /* HomeRowView.swift in Sources */,
 				FB14ECE0271E2AF400F6A334 /* PersistenceContainer.swift in Sources */,
 				FB3E430C27223F6C0020048F /* ActivityChartItem.swift in Sources */,

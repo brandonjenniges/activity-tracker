@@ -36,14 +36,16 @@ struct HomeView: View {
     @ViewBuilder
     private var dataView: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            ActivityChartFullView(data: self.viewModel.chartEntries, max: self.viewModel.chartMax, min: self.viewModel.chartMin)
-                .background(
-                    RoundedRectangle(cornerRadius: 6)
-                        .foregroundColor(.white)
-                        .shadow(radius: 2)
-                    
-                )
-                .padding(8)
+            if let chartData = self.viewModel.chartData {
+                ActivityChartFullView(data: chartData)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6)
+                            .foregroundColor(.white)
+                            .shadow(radius: 2)
+                        
+                    )
+                    .padding(8)
+            }
             
             
             VStack {
