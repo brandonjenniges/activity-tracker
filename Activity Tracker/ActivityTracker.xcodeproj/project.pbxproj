@@ -57,14 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB14EC81271CC39900F6A334 /* Activity Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Activity Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB14EC81271CC39900F6A334 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB14EC84271CC39900F6A334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB14EC88271CC39B00F6A334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB14EC8B271CC39B00F6A334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB14EC90271CC39B00F6A334 /* Activity_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Activity_Tracker.xcdatamodel; sourceTree = "<group>"; };
-		FB14EC96271CC39B00F6A334 /* Activity TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Activity TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB14EC96271CC39B00F6A334 /* ActivityTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB14EC9A271CC39B00F6A334 /* Activity_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_TrackerTests.swift; sourceTree = "<group>"; };
-		FB14ECA0271CC39B00F6A334 /* Activity TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Activity TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB14ECA0271CC39B00F6A334 /* ActivityTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB14ECA4271CC39B00F6A334 /* Activity_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_TrackerUITests.swift; sourceTree = "<group>"; };
 		FB14ECA6271CC39B00F6A334 /* Activity_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB14ECB6271CC47E00F6A334 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		FB14EC78271CC39900F6A334 = {
 			isa = PBXGroup;
 			children = (
-				FB14EC83271CC39900F6A334 /* Activity Tracker */,
+				FB14EC83271CC39900F6A334 /* ActivityTracker */,
 				FB14EC99271CC39B00F6A334 /* Activity TrackerTests */,
 				FB14ECA3271CC39B00F6A334 /* Activity TrackerUITests */,
 				FB14EC82271CC39900F6A334 /* Products */,
@@ -131,14 +131,14 @@
 		FB14EC82271CC39900F6A334 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB14EC81271CC39900F6A334 /* Activity Tracker.app */,
-				FB14EC96271CC39B00F6A334 /* Activity TrackerTests.xctest */,
-				FB14ECA0271CC39B00F6A334 /* Activity TrackerUITests.xctest */,
+				FB14EC81271CC39900F6A334 /* ActivityTracker.app */,
+				FB14EC96271CC39B00F6A334 /* ActivityTrackerTests.xctest */,
+				FB14ECA0271CC39B00F6A334 /* ActivityTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB14EC83271CC39900F6A334 /* Activity Tracker */ = {
+		FB14EC83271CC39900F6A334 /* ActivityTracker */ = {
 			isa = PBXGroup;
 			children = (
 				FB14ECBC271CC56900F6A334 /* Activity-Tracker-Info.plist */,
@@ -153,7 +153,7 @@
 				FB14ECB3271CC47200F6A334 /* UI */,
 				FB14ECD5271CF4E900F6A334 /* Util */,
 			);
-			path = "Activity Tracker";
+			path = ActivityTracker;
 			sourceTree = "<group>";
 		};
 		FB14EC8A271CC39B00F6A334 /* Preview Content */ = {
@@ -289,9 +289,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB14EC80271CC39900F6A334 /* Activity Tracker */ = {
+		FB14EC80271CC39900F6A334 /* ActivityTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB14ECAA271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity Tracker" */;
+			buildConfigurationList = FB14ECAA271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
 			buildPhases = (
 				FB14EC7D271CC39900F6A334 /* Sources */,
 				FB14EC7E271CC39900F6A334 /* Frameworks */,
@@ -301,16 +301,16 @@
 			);
 			dependencies = (
 			);
-			name = "Activity Tracker";
+			name = ActivityTracker;
 			packageProductDependencies = (
 			);
 			productName = "Activity Tracker";
-			productReference = FB14EC81271CC39900F6A334 /* Activity Tracker.app */;
+			productReference = FB14EC81271CC39900F6A334 /* ActivityTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB14EC95271CC39B00F6A334 /* Activity TrackerTests */ = {
+		FB14EC95271CC39B00F6A334 /* ActivityTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB14ECAD271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity TrackerTests" */;
+			buildConfigurationList = FB14ECAD271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */;
 			buildPhases = (
 				FB14EC92271CC39B00F6A334 /* Sources */,
 				FB14EC93271CC39B00F6A334 /* Frameworks */,
@@ -321,14 +321,14 @@
 			dependencies = (
 				FB14EC98271CC39B00F6A334 /* PBXTargetDependency */,
 			);
-			name = "Activity TrackerTests";
+			name = ActivityTrackerTests;
 			productName = "Activity TrackerTests";
-			productReference = FB14EC96271CC39B00F6A334 /* Activity TrackerTests.xctest */;
+			productReference = FB14EC96271CC39B00F6A334 /* ActivityTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB14EC9F271CC39B00F6A334 /* Activity TrackerUITests */ = {
+		FB14EC9F271CC39B00F6A334 /* ActivityTrackerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB14ECB0271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity TrackerUITests" */;
+			buildConfigurationList = FB14ECB0271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTrackerUITests" */;
 			buildPhases = (
 				FB14EC9C271CC39B00F6A334 /* Sources */,
 				FB14EC9D271CC39B00F6A334 /* Frameworks */,
@@ -339,9 +339,9 @@
 			dependencies = (
 				FB14ECA2271CC39B00F6A334 /* PBXTargetDependency */,
 			);
-			name = "Activity TrackerUITests";
+			name = ActivityTrackerUITests;
 			productName = "Activity TrackerUITests";
-			productReference = FB14ECA0271CC39B00F6A334 /* Activity TrackerUITests.xctest */;
+			productReference = FB14ECA0271CC39B00F6A334 /* ActivityTrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +367,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB14EC7C271CC39900F6A334 /* Build configuration list for PBXProject "Activity Tracker" */;
+			buildConfigurationList = FB14EC7C271CC39900F6A334 /* Build configuration list for PBXProject "ActivityTracker" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -382,9 +382,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB14EC80271CC39900F6A334 /* Activity Tracker */,
-				FB14EC95271CC39B00F6A334 /* Activity TrackerTests */,
-				FB14EC9F271CC39B00F6A334 /* Activity TrackerUITests */,
+				FB14EC80271CC39900F6A334 /* ActivityTracker */,
+				FB14EC95271CC39B00F6A334 /* ActivityTrackerTests */,
+				FB14EC9F271CC39B00F6A334 /* ActivityTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -470,12 +470,12 @@
 /* Begin PBXTargetDependency section */
 		FB14EC98271CC39B00F6A334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB14EC80271CC39900F6A334 /* Activity Tracker */;
+			target = FB14EC80271CC39900F6A334 /* ActivityTracker */;
 			targetProxy = FB14EC97271CC39B00F6A334 /* PBXContainerItemProxy */;
 		};
 		FB14ECA2271CC39B00F6A334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB14EC80271CC39900F6A334 /* Activity Tracker */;
+			target = FB14EC80271CC39900F6A334 /* ActivityTracker */;
 			targetProxy = FB14ECA1271CC39B00F6A334 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -604,7 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Activity Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ActivityTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 9MN6X9B3NV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -636,7 +636,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Activity Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ActivityTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = QW26LMGALU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -682,7 +682,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Activity Tracker.app/Activity Tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActivityTracker.app/ActivityTracker";
 			};
 			name = Debug;
 		};
@@ -707,7 +707,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Activity Tracker.app/Activity Tracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ActivityTracker.app/ActivityTracker";
 			};
 			name = Release;
 		};
@@ -760,7 +760,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB14EC7C271CC39900F6A334 /* Build configuration list for PBXProject "Activity Tracker" */ = {
+		FB14EC7C271CC39900F6A334 /* Build configuration list for PBXProject "ActivityTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB14ECA8271CC39B00F6A334 /* Debug */,
@@ -769,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB14ECAA271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity Tracker" */ = {
+		FB14ECAA271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB14ECAB271CC39B00F6A334 /* Debug */,
@@ -778,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB14ECAD271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity TrackerTests" */ = {
+		FB14ECAD271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB14ECAE271CC39B00F6A334 /* Debug */,
@@ -787,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB14ECB0271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "Activity TrackerUITests" */ = {
+		FB14ECB0271CC39B00F6A334 /* Build configuration list for PBXNativeTarget "ActivityTrackerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB14ECB1271CC39B00F6A334 /* Debug */,
